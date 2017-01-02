@@ -1,4 +1,4 @@
-package borisov.spring.base;
+package borisov.spring.internals.quater;
 
 import java.lang.reflect.Method;
 

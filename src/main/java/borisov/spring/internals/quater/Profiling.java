@@ -1,8 +1,6 @@
-package borisov.spring.base;
+package borisov.spring.internals.quater;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Profiling {
-
-}
+public @interface Profiling {}

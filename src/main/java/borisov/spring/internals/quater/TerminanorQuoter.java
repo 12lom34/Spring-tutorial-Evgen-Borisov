@@ -1,13 +1,18 @@
-package borisov.spring.base;
+package borisov.spring.internals.quater;
 
 import javax.annotation.PostConstruct;
 
 @Profiling
+@DeprecatedClass(newImpl = T1000.class)
 public class TerminanorQuoter implements Quoter {
-	@InjectRandomInt(min = 2, max = 7)
+//	@InjectRandomInt(min = 2, max = 7)
 	private int repeat;
 
 	private String message;
+
+	public void setRepeat(int repeat) {
+		this.repeat = repeat;
+	}
 
 	public void setMessage(String message) {
 		this.message = message;

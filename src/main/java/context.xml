@@ -7,10 +7,11 @@
     http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<context:annotation-config />
-	<bean class="borisov.spring.base.RetentionAnnotationBeanPostProccessor" />
-	<bean class="borisov.spring.base.ProfilingHandlerBeanPostProcessor" />
-	<bean class="borisov.spring.base.PostProxyInvokerContextListener" />
-	<bean class="borisov.spring.base.TerminanorQuoter" id="terminatorQuoter">
+	<bean class="borisov.spring.internals.quater.RetentionAnnotationBeanPostProccessor" />
+	<bean class="borisov.spring.internals.quater.ProfilingHandlerBeanPostProcessor" />
+	<bean class="borisov.spring.internals.quater.PostProxyInvokerContextListener" />
+	<bean class="borisov.spring.internals.quater.DeprecationHandlerBeanFactoryPostProcessor" />
+	<bean class="borisov.spring.internals.quater.TerminanorQuoter" id="terminatorQuoter">
 		<property name="message" value="I will be back." />
 	</bean>
 

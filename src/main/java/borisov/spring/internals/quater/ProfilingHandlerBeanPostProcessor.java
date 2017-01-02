@@ -1,4 +1,4 @@
-package borisov.spring.base;
+package borisov.spring.internals.quater;
 
 import java.lang.management.ManagementFactory;
 import java.lang.reflect.Method;
@@ -37,12 +37,13 @@ public class ProfilingHandlerBeanPostProcessor implements BeanPostProcessor {
 			return Proxy.newProxyInstance(beanClass.getClassLoader(), beanClass.getInterfaces(),
 					(Object proxy, Method method, Object[] args) -> {
 						if (controller.isEnabled()) {
-							System.out.println("Профилирую ....");
+							
+							System.out.println("Start Profiling ...");
 							long before = System.nanoTime();
 							Object retVal = method.invoke(bean, args);
 							long after = System.nanoTime();
 							System.out.println("Method profiling time : " + (after - before));
-							System.out.println("Все.");
+							System.out.println("End Profiling.");
 							return retVal;
 						} else {
 							return method.invoke(bean, args);
